@@ -9,15 +9,15 @@ import UIKit
 
 public class ListOfMoviesRouter: ListOfMoviesRouterProtocol {
     
-    init() {
+    public init() {
         
     }
     
-    func showListOfMovies(window: UIWindow?) {
+    public func showListOfMovies(window: UIWindow?) {
         let viewController = ListOfMoviesViewController()
         let interactor = ListOfMoviesInteractor()
         let presenter = ListOfMoviesPresenter(interactor: interactor)
-        presenter.view = viewController as? any LisOfMoviesUIProtocol 
+        presenter.view = viewController as? any LisOfMoviesUIProtocol
     
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

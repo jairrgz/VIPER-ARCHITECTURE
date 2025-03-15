@@ -6,24 +6,16 @@
 //
 
 import UIKit
+import Foundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-    var listOfMoviesRouter = ListOfMoviesRouter
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        guard let windowsScene = (scene as? UIWindowScene) else { return }
-        
-        window = UIWindow(windowScene: windowsScene)
-        listOfMoviesRouter.showListOfMovies(window: window!)
-        
-        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+        window?.makeKeyAndVisible()
     }
-
-   
-
-
+    
 }
-

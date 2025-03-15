@@ -3,27 +3,46 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;  // Cambiar de 77 a 56
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69B3D1D02D85D33700213D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3D1CF2D85D33700213D4C /* AppDelegate.swift */; };
-		69B3D1D22D85D33700213D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3D1D12D85D33700213D4C /* SceneDelegate.swift */; };
 		69B3D1D92D85D33900213D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B3D1D82D85D33900213D4C /* Assets.xcassets */; };
 		69B3D1DC2D85D33900213D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B3D1DA2D85D33900213D4C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69B3D1CC2D85D33700213D4C /* VIPER-ARCHITECTURE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-ARCHITECTURE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		69B3D1CF2D85D33700213D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69B3D1D12D85D33700213D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		69B3D1D82D85D33900213D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69B3D1DB2D85D33900213D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6928C48B2D860032003F7DDE /* Exceptions for "VIPER-ARCHITECTURE" folder in "VIPER-ARCHITECTURE" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDelegate.swift,
+				ListOfMovies/Entities/PopularMovieEntity.swift,
+				ListOfMovies/Entities/PopularMovieResponseEntity.swift,
+				ListOfMovies/Interactor/ListOfMoviesInteractor.swift,
+				ListOfMovies/Interactor/ListOfMoviesInteractorProtocol.swift,
+				ListOfMovies/Presenter/ListOfMoviesPresenter.swift,
+				ListOfMovies/Presenter/ListOfMoviesPresenterProtocol.swift,
+				ListOfMovies/Router/ListOfMoviesRouter.swift,
+				ListOfMovies/Router/ListOfMoviesRouterProtocol.swift,
+				ListOfMovies/View/ListOfMoviesViewController.swift,
+				SceneDelegate.swift,
+			);
+			target = 69B3D1CB2D85D33700213D4C /* VIPER-ARCHITECTURE */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		69B3D1CE2D85D33700213D4C /* VIPER-ARCHITECTURE */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6928C48B2D860032003F7DDE /* Exceptions for "VIPER-ARCHITECTURE" folder in "VIPER-ARCHITECTURE" target */,
+			);
 			path = "VIPER-ARCHITECTURE";
 			sourceTree = "<group>";
 		};
@@ -43,8 +62,6 @@
 		69B3D1C32D85D33700213D4C = {
 			isa = PBXGroup;
 			children = (
-				69B3D1D12D85D33700213D4C /* SceneDelegate.swift */,
-				69B3D1CF2D85D33700213D4C /* AppDelegate.swift */,
 				69B3D1D82D85D33900213D4C /* Assets.xcassets */,
 				69B3D1DA2D85D33900213D4C /* LaunchScreen.storyboard */,
 				69B3D1CE2D85D33700213D4C /* VIPER-ARCHITECTURE */,
@@ -133,8 +150,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69B3D1D02D85D33700213D4C /* AppDelegate.swift in Sources */,
-				69B3D1D22D85D33700213D4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

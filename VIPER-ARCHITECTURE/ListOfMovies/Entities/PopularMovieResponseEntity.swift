@@ -12,6 +12,7 @@ struct PopularMovieResponseEntity: Decodable {
     // MARK: - PROPERTIE
     let results: [PopularMovieEntity]
     
+    var ListOfMoviesRouterProtocol = ListOfMoviesRouter()
     // MARK: - ENUM
     enum CodingKeys: CodingKey {
         case results
