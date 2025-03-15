@@ -6,26 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		69B3D1D02D85D33700213D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3D1CF2D85D33700213D4C /* AppDelegate.swift */; };
+		69B3D1D22D85D33700213D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3D1D12D85D33700213D4C /* SceneDelegate.swift */; };
+		69B3D1D92D85D33900213D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B3D1D82D85D33900213D4C /* Assets.xcassets */; };
+		69B3D1DC2D85D33900213D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B3D1DA2D85D33900213D4C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		69B3D1CC2D85D33700213D4C /* VIPER-ARCHITECTURE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-ARCHITECTURE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B3D1CF2D85D33700213D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69B3D1D12D85D33700213D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		69B3D1D82D85D33900213D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69B3D1DB2D85D33900213D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		69B3D1DE2D85D33900213D4C /* Exceptions for "VIPER-ARCHITECTURE" folder in "VIPER-ARCHITECTURE" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 69B3D1CB2D85D33700213D4C /* VIPER-ARCHITECTURE */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		69B3D1CE2D85D33700213D4C /* VIPER-ARCHITECTURE */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				69B3D1DE2D85D33900213D4C /* Exceptions for "VIPER-ARCHITECTURE" folder in "VIPER-ARCHITECTURE" target */,
-			);
 			path = "VIPER-ARCHITECTURE";
 			sourceTree = "<group>";
 		};
@@ -45,6 +43,10 @@
 		69B3D1C32D85D33700213D4C = {
 			isa = PBXGroup;
 			children = (
+				69B3D1D12D85D33700213D4C /* SceneDelegate.swift */,
+				69B3D1CF2D85D33700213D4C /* AppDelegate.swift */,
+				69B3D1D82D85D33900213D4C /* Assets.xcassets */,
+				69B3D1DA2D85D33900213D4C /* LaunchScreen.storyboard */,
 				69B3D1CE2D85D33700213D4C /* VIPER-ARCHITECTURE */,
 				69B3D1CD2D85D33700213D4C /* Products */,
 			);
@@ -122,6 +124,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B3D1DC2D85D33900213D4C /* LaunchScreen.storyboard in Resources */,
+				69B3D1D92D85D33900213D4C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +136,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B3D1D02D85D33700213D4C /* AppDelegate.swift in Sources */,
+				69B3D1D22D85D33700213D4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		69B3D1DA2D85D33900213D4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69B3D1DB2D85D33900213D4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		69B3D1E02D85D33900213D4C /* Debug */ = {
@@ -150,7 +167,6 @@
 				INFOPLIST_FILE = "VIPER-ARCHITECTURE/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -178,7 +194,6 @@
 				INFOPLIST_FILE = "VIPER-ARCHITECTURE/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

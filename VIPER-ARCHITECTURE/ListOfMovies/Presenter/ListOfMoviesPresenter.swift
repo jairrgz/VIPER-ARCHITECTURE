@@ -1,0 +1,35 @@
+//
+//  ListOfMoviesPresenter.swift
+//  VIPER-ARCHITECTURE
+//
+//  Created by Jorge Jair Ramirez Gaston Zuloeta on 15/03/25.
+//
+
+
+import Foundation
+
+protocol LisOfMoviesUIProtocol: AnyObject {
+    func reloadData(movies: [PopularMovieEntity])
+}
+
+class ListOfMoviesPresenter {
+    
+    // MARK: - PROPERTIES
+    var view: LisOfMoviesUIProtocol?
+    private let interactor: ListOfMoviesInteractorProtocol?
+    
+    
+    // MARK: - DESIGNATER INITIALIZER
+    init(interactor: ListOfMoviesInteractorProtocol?) {
+        self.interactor = interactor
+    }
+    
+    func onViewApper() {
+        Task {
+            let modelRepository = await interactor?.getListOfMovies()
+            view?.reloadData(movies: modelRepository?.results ?? [])
+        }
+    }
+    
+    
+}
