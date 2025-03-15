@@ -31,7 +31,8 @@ final class ListOfMoviesPresenter: ListOfMoviesPresenterProtocol {
             if let modelRepository = await interactor?.getListOfMovies() {
                 print("✅ Interactor returned data: \(modelRepository.results.count) movies")
                 await MainActor.run {
-                    view?.reloadData(movies: modelRepository.results)
+                    let result = view?.reloadData(movies: modelRepository.results)
+                    
                 }
             } else {
                 print("❌ Interactor returned nil")

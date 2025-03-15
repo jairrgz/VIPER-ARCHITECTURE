@@ -14,7 +14,7 @@ import Foundation
     let id: Int
     let title: String
     let overview: String
-    let poster: String?  // Changed to optional
+    let poster: String?
     let voteAverage: Double
     
     // MARK: ENUM ADOPTING CodingKey

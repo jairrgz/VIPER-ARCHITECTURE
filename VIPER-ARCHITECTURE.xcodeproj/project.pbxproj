@@ -23,7 +23,9 @@
 			membershipExceptions = (
 				AppDelegate.swift,
 				ListOfMovies/Entities/PopularMovieEntity.swift,
+				ListOfMovies/Entities/PopularMovieEntityLocal.swift,
 				ListOfMovies/Entities/PopularMovieResponseEntity.swift,
+				ListOfMovies/Entities/PopularMovieResponseEntityLocal.swift,
 				ListOfMovies/Interactor/ListOfMoviesInteractor.swift,
 				ListOfMovies/Interactor/ListOfMoviesInteractorProtocol.swift,
 				ListOfMovies/Presenter/ListOfMoviesPresenter.swift,
