@@ -12,10 +12,10 @@ protocol LisOfMoviesUIProtocol: AnyObject {
     func reloadData(movies: [PopularMovieEntity])
 }
 
-class ListOfMoviesPresenter {
+class ListOfMoviesPresenter: ListOfMoviesPresenterProtocol {
     
     // MARK: - PROPERTIES
-    var view: LisOfMoviesUIProtocol?
+    weak var view: LisOfMoviesUIProtocol?
     private let interactor: ListOfMoviesInteractorProtocol?
     
     
