@@ -14,7 +14,7 @@ public struct PopularMovieEntity: Decodable {
     let id: Int
     let title: String
     let overview: String
-    let poster: String
+    let poster: String?  // Changed to optional
     let voteAverage: Double
     
     // MARK: ENUM ADOPTING CodingKey
@@ -31,7 +31,7 @@ public struct PopularMovieEntity: Decodable {
         self.id = try container.decode(Int.self, forKey: .id)
         self.title = try container.decode(String.self, forKey: .title)
         self.overview = try container.decode(String.self, forKey: .overview)
-        self.poster = try container.decode(String.self, forKey: .poster)
+        self.poster = try container.decodeIfPresent(String.self, forKey: .poster)  // Changed to decodeIfPresent
         self.voteAverage = try container.decode(Double.self, forKey: .voteAverage)
     }
     
