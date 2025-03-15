@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ListOfMoviesRouterProtocol: AnyObject {
+public protocol ListOfMoviesRouterProtocol: AnyObject {
     
     func showListOfMovies(window: UIWindow?)
     

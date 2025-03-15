@@ -6,7 +6,12 @@
 //
 
 import UIKit
-class ListOfMoviesRouter: ListOfMoviesRouterProtocol {
+
+public class ListOfMoviesRouter: ListOfMoviesRouterProtocol {
+    
+    init() {
+        
+    }
     
     func showListOfMovies(window: UIWindow?) {
         let viewController = ListOfMoviesViewController()

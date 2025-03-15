@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;  // Cambiar de 77 a 56
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -74,9 +74,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				69B3D1CE2D85D33700213D4C /* VIPER-ARCHITECTURE */,
 			);
 			name = "VIPER-ARCHITECTURE";
 			packageProductDependencies = (
