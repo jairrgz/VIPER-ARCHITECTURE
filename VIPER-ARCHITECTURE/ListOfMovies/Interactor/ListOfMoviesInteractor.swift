@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ListOfMoviesInteractor: ListOfMoviesInteractorProtocol {
+final class ListOfMoviesInteractor: ListOfMoviesInteractorProtocol {
     
     private let session: URLSession = {
         let configuration = URLSessionConfiguration.default
@@ -25,8 +25,10 @@ class ListOfMoviesInteractor: ListOfMoviesInteractorProtocol {
                 return nil
             }
             
+            var request = URLRequest(url: url)
+                   request.httpMethod = "GET"
             print("📡 Fetching data from API...")
-            let (data, response) = try await session.data(from: url)
+            let (data, response) = try await session.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
@@ -39,19 +41,25 @@ class ListOfMoviesInteractor: ListOfMoviesInteractorProtocol {
             // Print raw JSON for debugging
             if let jsonString = String(data: data, encoding: .utf8) {
                 print("📦 Raw JSON structure:")
+
+                // Imprimir el JSON en su forma legible
                 if let jsonData = jsonString.data(using: .utf8),
-                   let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: .fragmentsAllowed) as? [String: Any] {
-                    print("Keys in response: \(jsonObject.keys.joined(separator: ", "))")
-                    if let results = jsonObject["results"] as? [[String: Any]], !results.isEmpty {
-                        print("First movie keys: \(results[0].keys.joined(separator: ", "))")
+                   let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) {
+                    if let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
+                       let prettyJsonString = String(data: prettyJsonData, encoding: .utf8) {
+                        print("Pretty JSON:\n\(prettyJsonString)")
+                    }
+
+                    if let jsonDict = jsonObject as? [String: Any] {
+                        print("Keys in response: \(jsonDict.keys.joined(separator: ", "))")
+                        if let results = jsonDict["results"] as? [[String: Any]], !results.isEmpty {
+                            print("First movie keys: \(results[0].keys.joined(separator: ", "))")
+                        }
                     }
                 }
             }
             
             let decoder = JSONDecoder()
-            // Remove this as we're handling the snake_case manually in CodingKeys
-            // decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
             do {
                 let movieResponse = try decoder.decode(PopularMovieResponseEntity.self, from: data)
                 print("✅ Successfully decoded \(movieResponse.results.count) movies")

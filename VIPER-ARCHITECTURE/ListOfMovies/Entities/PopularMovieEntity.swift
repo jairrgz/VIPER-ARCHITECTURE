@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PopularMovieEntity: Decodable {
+ struct PopularMovieEntity: Decodable {
     
     // MARK: - PROPERTIES
     let id: Int
@@ -26,7 +26,7 @@ public struct PopularMovieEntity: Decodable {
     }
     
     // MARK: - DESIGNATER INITIALIZER FOR DEBUGG
-    public init(from decoder: any Decoder) throws {
+    init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.title = try container.decode(String.self, forKey: .title)

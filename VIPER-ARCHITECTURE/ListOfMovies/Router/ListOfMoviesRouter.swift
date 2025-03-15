@@ -7,13 +7,13 @@
 
 import UIKit
 
-public class ListOfMoviesRouter: ListOfMoviesRouterProtocol {
+final class ListOfMoviesRouter: ListOfMoviesRouterProtocol {
     
-    public init() {
-        
-    }
+    //MARK: - DESIGNATED INITIALIZER
+    init() { }
     
-    public func showListOfMovies(window: UIWindow?) {
+    // MARK: - METHOD
+     func showListOfMovies(window: UIWindow?) {
         let interactor = ListOfMoviesInteractor()
         let presenter = ListOfMoviesPresenter(interactor: interactor)
         let viewController = ListOfMoviesViewController(presenter: presenter)
