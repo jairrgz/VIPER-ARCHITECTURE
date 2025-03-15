@@ -9,9 +9,10 @@ import UIKit
 
 class ListOfMoviesViewController: UIViewController {
     
-    private let presenter: ListOfMoviesPresenterProtocol? = nil
+    private var presenter: ListOfMoviesPresenterProtocol?
     
-    init() {
+    init(presenter: ListOfMoviesPresenterProtocol) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,8 +25,6 @@ class ListOfMoviesViewController: UIViewController {
         view.backgroundColor = .systemBlue
         self.presenter?.onViewApper()
     }
-
-
 }
 
 extension ListOfMoviesViewController: LisOfMoviesUIProtocol {

@@ -7,6 +7,6 @@
 
 protocol ListOfMoviesInteractorProtocol: AnyObject {
     
-    func getListOfMovies() async -> PopularMovieResponseEntity
+    func getListOfMovies() async -> PopularMovieResponseEntity?
     
 }

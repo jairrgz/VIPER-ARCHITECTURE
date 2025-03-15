@@ -14,14 +14,13 @@ public class ListOfMoviesRouter: ListOfMoviesRouterProtocol {
     }
     
     public func showListOfMovies(window: UIWindow?) {
-        let viewController = ListOfMoviesViewController()
         let interactor = ListOfMoviesInteractor()
         let presenter = ListOfMoviesPresenter(interactor: interactor)
-        presenter.view = viewController as? any LisOfMoviesUIProtocol
+        let viewController = ListOfMoviesViewController(presenter: presenter)
+        presenter.view = viewController
     
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
-        
     }
     
     

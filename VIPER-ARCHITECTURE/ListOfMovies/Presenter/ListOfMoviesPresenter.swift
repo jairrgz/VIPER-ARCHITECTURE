@@ -25,8 +25,10 @@ class ListOfMoviesPresenter: ListOfMoviesPresenterProtocol {
     }
     
     func onViewApper() {
+        print("onViewApper called")
         Task {
             let modelRepository = await interactor?.getListOfMovies()
+            print("Data received from API")
             view?.reloadData(movies: modelRepository?.results ?? [])
         }
     }

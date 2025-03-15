@@ -7,108 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "93E1C13E-708A-47E5-96B3-C9DACA9ABFEC"
+            uuid = "F3FFC39F-9438-4CAB-B2D0-2877FB8231C3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VIPER-ARCHITECTURE/AppDelegate.swift"
+            filePath = "VIPER-ARCHITECTURE/ListOfMovies/Interactor/ListOfMoviesInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "application(_:configurationForConnecting:options:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A3936352-18CD-4137-90AE-D98DDF776CDF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VIPER-ARCHITECTURE/ListOfMovies/View/ListOfMoviesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9B460A56-F371-4B2E-82A6-E05D2E4C78A9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VIPER-ARCHITECTURE/ListOfMovies/Presenter/ListOfMoviesPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "onViewApper()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9B460A56-F371-4B2E-82A6-E05D2E4C78A9 - b5a4d0927751ed9b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VIPER_ARCHITECTURE.ListOfMoviesPresenter.onViewApper() -&gt; ()"
-                  moduleName = "VIPER-ARCHITECTURE.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jramirzu/Desktop/VIPER-ARCHITECTURE/VIPER-ARCHITECTURE/ListOfMovies/Presenter/ListOfMoviesPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "9B460A56-F371-4B2E-82A6-E05D2E4C78A9 - 4a3832c1d630ad2b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () async -&gt; () in VIPER_ARCHITECTURE.ListOfMoviesPresenter.onViewApper() -&gt; ()"
-                  moduleName = "VIPER-ARCHITECTURE.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jramirzu/Desktop/VIPER-ARCHITECTURE/VIPER-ARCHITECTURE/ListOfMovies/Presenter/ListOfMoviesPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "9B460A56-F371-4B2E-82A6-E05D2E4C78A9 - c993681a82ca7499"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 () async -&gt; () in VIPER_ARCHITECTURE.ListOfMoviesPresenter.onViewApper() -&gt; ()"
-                  moduleName = "VIPER-ARCHITECTURE.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jramirzu/Desktop/VIPER-ARCHITECTURE/VIPER-ARCHITECTURE/ListOfMovies/Presenter/ListOfMoviesPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B91AC5A-D8DA-4DBE-B988-7F3B07683694"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VIPER-ARCHITECTURE/ListOfMovies/View/ListOfMoviesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "reloadData(movies:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getListOfMovies()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
