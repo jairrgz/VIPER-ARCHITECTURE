@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieViewCell: UITableViewCell {
 
@@ -80,7 +81,7 @@ class MovieViewCell: UITableViewCell {
     
     func configuration(model: PopularMovieEntityLocal) {
         titleLabel.text = model.title
-        imageViewMovie.image = UIImage(named: model.poster ?? "")
+        imageViewMovie.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w200" + (model.poster ?? "")))
         descriptionLabel.text = model.overview
         averageLabel.text = "\(model.voteAverage)"
         
