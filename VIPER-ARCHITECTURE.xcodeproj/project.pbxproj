@@ -33,6 +33,7 @@
 				ListOfMovies/Router/ListOfMoviesRouter.swift,
 				ListOfMovies/Router/ListOfMoviesRouterProtocol.swift,
 				ListOfMovies/View/ListOfMoviesViewController.swift,
+				ListOfMovies/View/SubView/MovieViewCell.swift,
 				SceneDelegate.swift,
 			);
 			target = 69B3D1CB2D85D33700213D4C /* VIPER-ARCHITECTURE */;
