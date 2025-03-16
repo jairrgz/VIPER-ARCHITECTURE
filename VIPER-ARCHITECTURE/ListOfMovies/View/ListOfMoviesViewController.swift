@@ -28,15 +28,21 @@ class ListOfMoviesViewController: UIViewController {
 }
 
 extension ListOfMoviesViewController: LisOfMoviesUIProtocol {
-    func reloadData(movies: [PopularMovieEntity]) {
+    
+    
+    func reloadData(movies: [PopularMovieEntityLocal]) {
         print("📱 ViewController received \(movies.count) movies")
         if movies.isEmpty {
             print("⚠️ Movies array is empty")
         } else {
             movies.forEach { movie in
-                print("🎬 Movie: \(movie)")
+                print("🎬 The Movie is: \(movie)")
             }
         }
+    }
+    
+    func showERROR(message: String) {
+        print("The eror is: \(message)")
     }
     
     

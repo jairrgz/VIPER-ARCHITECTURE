@@ -17,7 +17,7 @@ final class ListOfMoviesInteractor: ListOfMoviesInteractorProtocol {
         return URLSession(configuration: configuration, delegate: delegate, delegateQueue: nil)
     }()
     
-    func getListOfMovies() async -> PopularMovieResponseEntity? {
+    func getListOfMovies() async -> PopularMovieResponseEntityLocal? {
         do {
             let apiKey = "214e1e94e242dbaa1c5271729d90b73c"
             guard let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)") else {
@@ -59,11 +59,13 @@ final class ListOfMoviesInteractor: ListOfMoviesInteractorProtocol {
                 }
             }
             
-            let decoder = JSONDecoder()
             do {
+                let decoder = JSONDecoder()
                 let movieResponse = try decoder.decode(PopularMovieResponseEntity.self, from: data)
-                print("✅ Successfully decoded \(movieResponse.results.count) movies")
-                return movieResponse
+                
+                // Convertir a modelo local
+                let localMovies = movieResponse.results.map { PopularMovieEntityLocal.convert($0) }
+                return PopularMovieResponseEntityLocal(results: localMovies)
             } catch {
                 print("❌ Decoding error: \(error)")
                 if let decodingError = error as? DecodingError {

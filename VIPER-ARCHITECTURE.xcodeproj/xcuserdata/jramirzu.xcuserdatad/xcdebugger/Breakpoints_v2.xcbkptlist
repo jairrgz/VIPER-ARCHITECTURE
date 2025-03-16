@@ -36,5 +36,51 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69ACCEE3-F7E9-4D29-918A-094FAC6BC184"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VIPER-ARCHITECTURE/ListOfMovies/View/ListOfMoviesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "reloadData(movies:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "69ACCEE3-F7E9-4D29-918A-094FAC6BC184 - 53c8e22054b294cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VIPER_ARCHITECTURE.ListOfMoviesViewController.reloadData(movies: Swift.Array&lt;VIPER_ARCHITECTURE.PopularMovieEntityLocal&gt;) -&gt; ()"
+                  moduleName = "VIPER-ARCHITECTURE.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jramirzu/Desktop/VIPER-ARCHITECTURE/VIPER-ARCHITECTURE/ListOfMovies/View/ListOfMoviesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39">
+               </Location>
+               <Location
+                  uuid = "69ACCEE3-F7E9-4D29-918A-094FAC6BC184 - ddb9093fd02d1288"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (VIPER_ARCHITECTURE.PopularMovieEntityLocal) -&gt; () in VIPER_ARCHITECTURE.ListOfMoviesViewController.reloadData(movies: Swift.Array&lt;VIPER_ARCHITECTURE.PopularMovieEntityLocal&gt;) -&gt; ()"
+                  moduleName = "VIPER-ARCHITECTURE.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jramirzu/Desktop/VIPER-ARCHITECTURE/VIPER-ARCHITECTURE/ListOfMovies/View/ListOfMoviesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -9,36 +9,36 @@
 import Foundation
 
 protocol LisOfMoviesUIProtocol: AnyObject {
-    func reloadData(movies: [PopularMovieEntity])
+    func reloadData(movies: [PopularMovieEntityLocal])
+    func showERROR(message: String)
 }
 
 final class ListOfMoviesPresenter: ListOfMoviesPresenterProtocol {
     
-    // MARK: - PROPERTIES
+    private let interactor: ListOfMoviesInteractorProtocol
     weak var view: LisOfMoviesUIProtocol?
-    private let interactor: ListOfMoviesInteractorProtocol?
     
-    
-    // MARK: - DESIGNATER INITIALIZER
-    init(interactor: ListOfMoviesInteractorProtocol?) {
+    init(interactor: ListOfMoviesInteractorProtocol) {
         self.interactor = interactor
     }
     
     func onViewApper() {
         print("onViewApper called")
         Task {
-            print("Requesting data from interactor...")
-            if let modelRepository = await interactor?.getListOfMovies() {
-                print("✅ Interactor returned data: \(modelRepository.results.count) movies")
+            do {
+                // Add explicit type annotation here
+                let movies: PopularMovieResponseEntityLocal = try await interactor.getListOfMovies()!
+                
                 await MainActor.run {
-                    let result = view?.reloadData(movies: modelRepository.results)
-                    
+                    // Use non-optional movies since getListOfMovies now returns non-optional
+                    view?.reloadData(movies: movies.results)
                 }
-            } else {
-                print("❌ Interactor returned nil")
+            } catch {
+                await MainActor.run {
+                    print("The Error is")
+                    view?.showERROR(message: error.localizedDescription)
+                }
             }
         }
     }
-    
-    
 }
